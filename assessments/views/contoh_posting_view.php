@@ -7,10 +7,6 @@ class Contoh_posting_view extends View{
 		parent::View();
 	}
 
-	public function Test() {
-		return "<h1>Aku Ganteng</h1>";
-	}
-
 	public function Home($resultNewsFeeds,$resultJobSeekers){
 		$html="";
 

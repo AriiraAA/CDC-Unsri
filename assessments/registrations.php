@@ -58,8 +58,8 @@ License: You must have a valid license purchased only from themeforest(the above
             <div class="container-fluid">
                 <div class="havbar-header">
                 	<!-- BEGIN LOGO -->
-                    <a id="index" class="navbar-brand" href="start.html">
-                        <img src="../assets/admin/layout6/img/logo.png" alt="Logo">
+                    <a id="index" class="navbar-brand" href="index.php">
+                        <img src="../images/cdc_color_border.png" alt="Logo">
                     </a>
                 	<!-- END LOGO -->
 
@@ -121,80 +121,18 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
 					<ul class="page-sidebar-menu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
 						<li class="active">
-							<a href="index.html">
+							<a id="Guidelines">
 							<i class="icon-list"></i>
 							<span class="title">Guidelines</span>
 							</a>
 						</li>
 						<li>
-							<a href="start.html">
+							<a id="registration">
 							<i class="icon-home"></i>
 							<span class="title">Registration</span>
 							</a>
 						</li>
-						<li>
-							<a href="javascript:;">
-							<i class="icon-folder"></i>
-							<span class="title">Multi Level Menu</span>
-							<span class="arrow "></span>
-							</a>
-							<ul class="sub-menu">
-								<li>
-									<a href="javascript:;">
-									<i class="icon-settings"></i> Item 1 <span class="arrow"></span>
-									</a>
-									<ul class="sub-menu">
-										<li>
-											<a href="javascript:;">
-											<i class="icon-user"></i>
-											Sample Link 1 <span class="arrow"></span>
-											</a>
-											<ul class="sub-menu">
-												<li>
-													<a href="#"><i class="icon-power"></i> Sample Link 1</a>
-												</li>
-												<li>
-													<a href="#"><i class="icon-paper-plane"></i> Sample Link 1</a>
-												</li>
-												<li>
-													<a href="#"><i class="icon-star"></i> Sample Link 1</a>
-												</li>
-											</ul>
-										</li>
-										<li>
-											<a href="#"><i class="icon-camera"></i> Sample Link 1</a>
-										</li>
-										<li>
-											<a href="#"><i class="icon-link"></i> Sample Link 2</a>
-										</li>
-										<li>
-											<a href="#"><i class="icon-pointer"></i> Sample Link 3</a>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<a href="javascript:;">
-									<i class="icon-globe"></i> Item 2 <span class="arrow"></span>
-									</a>
-									<ul class="sub-menu">
-										<li>
-											<a href="#"><i class="icon-tag"></i> Sample Link 1</a>
-										</li>
-										<li>
-											<a href="#"><i class="icon-pencil"></i> Sample Link 1</a>
-										</li>
-										<li>
-											<a href="#"><i class="icon-graph"></i> Sample Link 1</a>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<a href="#">
-									<i class="icon-bar-chart"></i>
-									Item 3 </a>
-								</li>
-							</ul>
-						</li>
+					
 					</ul>
 					<!-- END SIDEBAR MENU -->
 				</div>
@@ -208,12 +146,12 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="portlet light bordered">
 							<div class="portlet-title">
 								<div class="caption font-dark">
-									<span class="caption-subject bold uppercase">Guidelines</span>
+									<span class="caption-subject bold uppercase" id="title">Guidelines</span>
 									<span class="caption-helper"></span>
 								</div>
 							</div>
 							<div class="portlet-body" id="content">
-    							ini conttnent
+    							COMING SOON!!!
 							</div>
 						</div>
 						<!-- END PORTLET-->
@@ -258,6 +196,39 @@ License: You must have a valid license purchased only from themeforest(the above
 <script src="../assets/admin/layout6/scripts/index.js" type="text/javascript"></script>
 <script src="../assets/admin/pages/scripts/tasks.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#Guidelines").click(function() {
+			$.ajax({
+				url: "controllers/Registration_controller.php?action=Guidelines",
+				success: function(data) {
+					$("#title").text('Guidelines');
+					$("#content").html(data);
+					$("#registration").parent().removeClass("active");
+					$("#guidelines").parent().addClass("active");
+				},
+				error: function() {
+					alert("Error!!!!");
+				}
+			});
+		});
+		$("#registration").click(function() {
+			$.ajax({
+				url: "controllers/Registration_controller.php?action=Registration",
+				success: function(data) {
+					$("#title").text('Registration');
+					$("#content").html(data);
+					$("#guidelines").parent().removeClass("active");
+					$("#registration").parent().addClass("active");
+				},
+				error: function() {
+					alert("Error!!!!");
+				}
+			});
+		});
+	});
+</script>
 <script>
 jQuery(document).ready(function() {    
    	Metronic.init(); // init metronic core componets

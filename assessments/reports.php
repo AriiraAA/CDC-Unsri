@@ -58,8 +58,8 @@ License: You must have a valid license purchased only from themeforest(the above
             <div class="container-fluid">
                 <div class="havbar-header">
                 	<!-- BEGIN LOGO -->
-                    <a id="index" class="navbar-brand" href="start.html">
-                        <img src="../assets/admin/layout6/img/logo.png" alt="Logo">
+                    <a id="index" class="navbar-brand" href="index.php">
+                        <img src="../images/cdc_color_border.png" alt="Logo">
                     </a>
                 	<!-- END LOGO -->
 

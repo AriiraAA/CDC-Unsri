@@ -58,8 +58,8 @@ License: You must have a valid license purchased only from themeforest(the above
             <div class="container-fluid">
                 <div class="havbar-header">
                 	<!-- BEGIN LOGO -->
-                    <a id="index" class="navbar-brand" href="start.html">
-                        <img src="../assets/admin/layout6/img/logo.png" alt="Logo">
+                    <a id="index" class="navbar-brand" href="index.php">
+                        <img src="../images/cdc_color_border.png" alt="Logo">
                     </a>
                 	<!-- END LOGO -->
 
@@ -119,7 +119,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
 					<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
 					<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-					<ul class="page-sidebar-menu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+					<ul id="sidebar" class="page-sidebar-menu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
 						<li class="active">
 							<a id="guidelines">
 							<i class="icon-list"></i>
